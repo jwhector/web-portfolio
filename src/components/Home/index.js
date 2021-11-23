@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import ring from '../ring.png';
-import nameImg from '../nameImg.png';
+import ring from './ring.png';
+import nameImg from './nameImg.png';
 
 export default function Home() {
     useEffect(() => {
