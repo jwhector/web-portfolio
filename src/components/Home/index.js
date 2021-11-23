@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import ring from './ring.png';
-import nameImg from './nameImg.png';
+import './index.css';
 
 export default function Home() {
     useEffect(() => {
@@ -8,12 +7,22 @@ export default function Home() {
     });
 
     return (
-        <div className="home">
-            <div className="home-container">
-                {/* <h2>Hi, I'm</h2> */}
-                <img src={ring} alt="Neon ring" id="ring"/>
-                <img src={nameImg} alt="Jared Hector" id="name-img" />
-                {/* <h2>I'm a full stack engineer.</h2> */}
+        <div id="home">
+            <h2 id="my-name" className="hdr-txt">Jared Hector</h2>      
+            <h3 id="subtitle">Developer. Project manager. Dungeon Master.</h3>
+            <div className="main-links">
+                <div className="menu-div">
+                    <h2 className="hdr-txt big-nav">ABOUT</h2>
+                    <a href="#about"></a>
+                </div>
+                <div className="menu-div">
+                    <h2 className="hdr-txt big-nav">PORTFOLIO</h2>
+                    <a href="#portfolio"></a>
+                </div>
+                <div className="menu-div">
+                    <h2 className="hdr-txt big-nav">CONTACT</h2>
+                    <a href="#contact"></a>
+                </div>
             </div>
         </div>
     );
