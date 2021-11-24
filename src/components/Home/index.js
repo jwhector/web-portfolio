@@ -8,7 +8,10 @@ export default function Home() {
 
     return (
         <div id="home">
-            <h2 id="my-name" className="hdr-txt">Jared Hector</h2>      
+            <h2 id="my-name" className="hdr-txt">Jared Hector</h2>
+            <div id="name-box">
+                
+            </div>   
             <h3 id="subtitle">Developer. Project manager. Dungeon Master.</h3>
             <div className="main-links">
                 <div className="menu-div">

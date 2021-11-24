@@ -1,0 +1,37 @@
+
+
+#about {
+    /* width: 100vw;
+    height: 100vh; */
+    display: flex;
+    
+}
+
+.left-pane {
+    /* height: 100vh; */
+    /* width: 50vw; */
+    background-color: black;
+    width: 50vw;
+}
+
+#about-header {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 64px;
+}
+
+#about-left {
+    font-size: 32px;
+    background: black;
+    /* border: 1px solid #707070; */
+}
+
+#about-right {
+    /* display: inline-block; */
+    width: 50vw;
+    height: 100vh;
+    float: right;
+    background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
+}

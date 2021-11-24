@@ -1,18 +1,28 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../../res/Lato/Lato-Regular.ttf');
+}
+
+/* html, body {
+    height: 100%;
+    overflow: hidden;
+} */
+
 #home {
     height: 100vh;
     position: relative;
+    background: transparent linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
     /* width: 100vw; */
     /* background-color: purple; */
 }
 
 #my-name {
     position: relative;
-    top: 1em;
-    left: .5em;
-    width: 406px;
-    height: 51px;
+    display: inline-block;
+    top: 1.5em;
+    left: 2em;
     text-align: left;
-    font: normal normal normal 51px/71px Bungee;
+    font: normal normal normal 40px/51px Bungee;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -21,12 +31,12 @@
 
 #subtitle {
     position: relative;
-    top: 200px;
+    top: 3em;
     left: 52px;
     width: 505px;
     height: 66px;
     text-align: left;
-    font: normal normal normal 24px/33px Avenir Next;
+    font: normal normal normal 24px/33px 'Lato';
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -72,7 +82,7 @@ span {
 }
 
 .big-nav {
-    font-size: 177px;
+    font-size: 120px;
     letter-spacing: 0px;
     color: #FFFFFF;
     text-shadow: 0px 3px 6px #000000B3, 0px 3px 6px #00000029;
