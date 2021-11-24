@@ -24,7 +24,25 @@ a {
     font-family: 'Bungee'; 
 }
 
-.stop-scroll {
-    height: 100%;
-    overflow: hidden;
+.section-label {
+    width: 40vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
+}
+
+.fix-right {
+    position: fixed;
+    top: 0;
+    right: 0px;
+}
+
+.fix-left {
+    position: fixed;
+    top: 0;
+    left: 0px;
+}
+
+.section-info {
+    background-color: black;
+    width: 60vw;
 }

@@ -1,0 +1,18 @@
+#portfolio {
+    display: flex; 
+}
+
+#portfolio-header {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 64px;
+}
+
+#about-left {
+    font-size: 32px;
+    background: black;
+    /* border: 1px solid #707070; */
+}
+
