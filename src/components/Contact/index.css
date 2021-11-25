@@ -1,0 +1,17 @@
+#contact {
+    display: flex;
+    position: relative;
+    font-size: 32px;
+}
+
+#contact-label {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}

@@ -24,25 +24,67 @@ a {
     font-family: 'Bungee'; 
 }
 
+.section {
+    background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box; ;
+}
+
 .section-label {
     width: 40vw;
     height: 100vh;
     background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
 }
 
+.flip-gradient {
+    background: linear-gradient(0deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
+}
+
 .fix-right {
     position: fixed;
     top: 0;
-    right: 0px;
+    right: 0;
 }
 
 .fix-left {
     position: fixed;
     top: 0;
-    left: 0px;
+    left: 0;
 }
 
 .section-info {
     background-color: black;
     width: 60vw;
+}
+
+.pin-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: auto;
+}
+
+.pin-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: auto;
+}
+
+.flex-right {
+    margin-left: auto;
+}
+
+.flex-left {
+    margin-right: auto;
+}
+
+.label {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 64px;
+}
+
+.hidden {
+    display: none;
 }

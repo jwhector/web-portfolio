@@ -3,16 +3,23 @@
 #about {
     /* width: 100vw;
     height: 100vh; */
+    position: relative;
     display: flex;
     
 }
 
-#about-header {
+/* #about-header {
     position: relative;
     text-align: center;
     top: 50%;
     transform: translate(0, -50%);
     font-size: 64px;
+} */
+
+#about-label {
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 #about-left {

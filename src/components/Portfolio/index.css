@@ -1,18 +1,24 @@
 #portfolio {
-    display: flex; 
+    display: flex;
+    position: relative;
 }
 
-#portfolio-header {
+/* #portfolio-header {
     position: relative;
     text-align: center;
     top: 50%;
     transform: translate(0, -50%);
     font-size: 64px;
+} */
+
+#portfolio-label {
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
-#about-left {
+#portfolio-info {
     font-size: 32px;
     background: black;
-    /* border: 1px solid #707070; */
 }
 
