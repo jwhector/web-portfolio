@@ -3,18 +3,6 @@ import './index.css';
 import nameBox from './nameBox.png';
 
 export default function Home() {
-    useEffect(() => {
-        console.log(__dirname);
-    });
-
-    // useEffect(() => {
-    //     const about = document.getElementById('about');
-    //     const portfolio = document.getElementById('portfolio');
-    //     const contact = document.getElementById('contact');
-
-    //     about.addEventListener()
-    // });
-
     const scrollToAbout = () => {
         const about = document.getElementById('about');
         about.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });

@@ -20,17 +20,29 @@ a {
     text-decoration: none;
 }
 
+p {
+    min-width: 0;
+}
+
 .hdr-txt {
     font-family: 'Bungee'; 
 }
 
 .section {
+    display: flex;
+    justify-content: center;
     background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box; ;
 }
 
 .section-label {
-    width: 40vw;
+    width: 30vw;
+    /* min-width: 20vw; */
+    /* min-width: 400px; */
+    /* max-width: 400px; */
+    /* flex-grow: 1; */
+    flex-shrink: 0;
     height: 100vh;
+    overflow: hidden;
     background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
 }
 
@@ -51,8 +63,11 @@ a {
 }
 
 .section-info {
-    background-color: black;
-    width: 60vw;
+    background-color: #31393C;
+    /* min-width: 60vw; */
+    /* width: 60vw; */
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .pin-bottom-right {
