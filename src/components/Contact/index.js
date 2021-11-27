@@ -33,21 +33,24 @@ export default function Contact() {
                 <h2 id="contact-header-bottom" className="hdr-txt label">CONTACT</h2>
             </div> */}
             <div id="contact-info" className="section-info flex-right">
-                {/* <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <label>
                         Name:
+                        <br />
                         <input type="text" value={name} onChange={handleNameInput} name="name" placeholder="name" />
                     </label>
                     <label>
                         Email:
+                        <br />
                         <input type="text" value={email} onChange={handleEmailInput} name="email" placeholder="email" />
                     </label>
                     <label>
                         Message:
+                        <br />
                         <textarea value={message} onChange={handleMessageInput} />
                     </label>
                     <input type="submit"></input>
-                </form> */}
+                </form>
                 {/* <p>
 //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui id ante pulvinar malesuada. Aenean et sem convallis, venenatis orci vitae, fermentum est. Etiam id risus ut elit lobortis hendrerit id tempus turpis. Praesent volutpat rhoncus nisi ut sollicitudin. Nulla sit amet varius elit. Aenean pharetra condimentum tortor eu pulvinar. Donec in mauris nisi. Vivamus scelerisque efficitur libero non tincidunt. Nullam faucibus neque sed est commodo, sed gravida tellus consectetur.
 

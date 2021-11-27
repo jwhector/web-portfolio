@@ -38,6 +38,67 @@
     animation: fadeIn 1s;
 }
 
+#education {
+    width: 80%;
+}
+
+.school {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* align-items: center;
+    justify-content: space-between; */
+    margin: 10% 0;
+}
+
+.school-logo {
+    max-height: 300px;
+    
+    /* margin: 100px; */
+}
+
+.school-info {
+    text-align: center;
+} 
+
+.school-name {
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    font-size: 2em;
+}
+
+.school-details {
+    margin-top: 10px;
+}
+
+#skillset {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    font-size: 40px;
+}
+
+.skill img {
+    max-height: 200px;
+}
+
+.about-section-label {
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(5%);}
     100% { opacity: 1; transform: translateY(0%)}

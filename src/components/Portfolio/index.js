@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import './index.css';
+import glassAnimals from './glassanimals.png';
+import github from './github.png';
+import mindgro from './mindgro.jpg';
+import metaMeme from './metameme.png';
 
 export default function About() {
     // useEffect(() => {
@@ -15,17 +19,45 @@ export default function About() {
                 <h2 id="portfolio-header-bottom" className="hdr-txt label">WORKS</h2>
             </div> */}
             <div id="portfolio-info" className="section-info flex-right">
-                {/* <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui id ante pulvinar malesuada. Aenean et sem convallis, venenatis orci vitae, fermentum est. Etiam id risus ut elit lobortis hendrerit id tempus turpis. Praesent volutpat rhoncus nisi ut sollicitudin. Nulla sit amet varius elit. Aenean pharetra condimentum tortor eu pulvinar. Donec in mauris nisi. Vivamus scelerisque efficitur libero non tincidunt. Nullam faucibus neque sed est commodo, sed gravida tellus consectetur.
-
-                    Donec maximus sodales dui, sit amet semper quam volutpat quis. Sed imperdiet sollicitudin elit eu varius. Phasellus fermentum justo nec dolor rhoncus ornare. Donec viverra mauris quis ligula malesuada, eu tristique sem consequat. Aenean ut urna convallis, pulvinar metus ut, lobortis est. Vestibulum a semper erat, nec hendrerit justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras libero risus, sagittis eget urna vitae, facilisis varius diam. Vestibulum vitae pretium lacus. Sed quis augue id purus commodo commodo. Fusce lorem tortor, vehicula id neque lobortis, congue tempor elit. Nulla lacinia id dui eget lobortis. Pellentesque ullamcorper mauris lacinia, tempus ex vel, dignissim justo. Curabitur pretium nisi eget felis sollicitudin feugiat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui id ante pulvinar malesuada. Aenean et sem convallis, venenatis orci vitae, fermentum est. Etiam id risus ut elit lobortis hendrerit id tempus turpis. Praesent volutpat rhoncus nisi ut sollicitudin. Nulla sit amet varius elit. Aenean pharetra condimentum tortor eu pulvinar. Donec in mauris nisi. Vivamus scelerisque efficitur libero non tincidunt. Nullam faucibus neque sed est commodo, sed gravida tellus consectetur.
-
-                    Donec maximus sodales dui, sit amet semper quam volutpat quis. Sed imperdiet sollicitudin elit eu varius. Phasellus fermentum justo nec dolor rhoncus ornare. Donec viverra mauris quis ligula malesuada, eu tristique sem consequat. Aenean ut urna convallis, pulvinar metus ut, lobortis est. Vestibulum a semper erat, nec hendrerit justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras libero risus, sagittis eget urna vitae, facilisis varius diam. Vestibulum vitae pretium lacus. Sed quis augue id purus commodo commodo. Fusce lorem tortor, vehicula id neque lobortis, congue tempor elit. Nulla lacinia id dui eget lobortis. Pellentesque ullamcorper mauris lacinia, tempus ex vel, dignissim justo. Curabitur pretium nisi eget felis sollicitudin feugiat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui id ante pulvinar malesuada. Aenean et sem convallis, venenatis orci vitae, fermentum est. Etiam id risus ut elit lobortis hendrerit id tempus turpis. Praesent volutpat rhoncus nisi ut sollicitudin. Nulla sit amet varius elit. Aenean pharetra condimentum tortor eu pulvinar. Donec in mauris nisi. Vivamus scelerisque efficitur libero non tincidunt. Nullam faucibus neque sed est commodo, sed gravida tellus consectetur.
-
-                    Donec maximus sodales dui, sit amet semper quam volutpat quis. Sed imperdiet sollicitudin elit eu varius. Phasellus fermentum justo nec dolor rhoncus ornare. Donec viverra mauris quis ligula malesuada, eu tristique sem consequat. Aenean ut urna convallis, pulvinar metus ut, lobortis est. Vestibulum a semper erat, nec hendrerit justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras libero risus, sagittis eget urna vitae, facilisis varius diam. Vestibulum vitae pretium lacus. Sed quis augue id purus commodo commodo. Fusce lorem tortor, vehicula id neque lobortis, congue tempor elit. Nulla lacinia id dui eget lobortis. Pellentesque ullamcorper mauris lacinia, tempus ex vel, dignissim justo. Curabitur pretium nisi eget felis sollicitudin feugiat.
-                </p> */}
+                <h2 id="portfolio-title">Portfolio</h2>
+                <hr />
+                <div id="portfolio-works">
+                    <div className="work">
+                        <img id="glassanimals" className="work-img" alt="Screenshot of the code quiz website with Glass Animals on the front." src={glassAnimals} />
+                        <a className="overlay" href="https://jwhector.github.io/code-quiz/"><div>
+                            <h2 className="work-name">Glass Animals Code Quiz</h2>
+                            <a href="https://github.com/jwhector/code-quiz"><img src={github} alt="GitHub icon." /></a>
+                        </div></a>
+                    </div>
+                    <div className="work">
+                        <img id="mindgro" className="work-img" alt="Screenshot of the MindGro website with a pond and lilypad in middle." src={mindgro} />
+                        <a className="overlay" href="https://jwhector.github.io/mind-gro/"><div>
+                            <h2 className="work-name">Mind-Gro Journal</h2>
+                            <a href="https://github.com/jwhector/mind-gro"><img src={github} alt="GitHub icon." /></a>
+                        </div></a>
+                    </div>
+                    <div className="work">
+                        <img id="metameme" className="work-img" alt="Screenshot of the Meta Meme Market website with various memes in a gallery." src={metaMeme} />
+                        <a className="overlay" href="https://meta-meme-market.herokuapp.com/"><div>
+                            <h2 className="work-name">MetaMeme Market</h2>
+                            <a href="https://github.com/jwhector/meta-meme-market"><img src={github} alt="GitHub icon." /></a>
+                        </div></a>
+                    </div>
+                    {/* <div className="work">
+                        <img id="glassanimals" alt="Screenshot of the code quiz website with Glass Animals on the front." src={glassAnimals} />
+                        <div className="overlay">
+                            <h2 className="work-name">Glass Animals Code Quiz</h2>
+                            <a href="https://github.com/jwhector/code-quiz"><img src={github} alt="GitHub icon." /></a>
+                        </div>
+                    </div>
+                    <div className="work">
+                        <img id="glassanimals" alt="Screenshot of the code quiz website with Glass Animals on the front." src={glassAnimals} />
+                        <div className="overlay">
+                            <h2 className="work-name">Glass Animals Code Quiz</h2>
+                            <a href="https://github.com/jwhector/code-quiz"><img src={github} alt="GitHub icon." /></a>
+                        </div>
+                    </div> */}
+                </div>
             </div>  
         </div>
     );

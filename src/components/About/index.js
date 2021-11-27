@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import './index.css';
 import pfp from './jwhector.jpeg';
+import uw from './uw.png';
+import stanford from './stanford.png';
+import cpp from './cpp.png';
+import react from './react.png';
+import nodejs from './nodejs.png';
+import python from './python.png';
+import frontend from './frontend.png';
+import db from './db.png';
 
 export default function About() {
     return (
@@ -13,13 +21,61 @@ export default function About() {
             </div> */}
             <div id="about-left" className="section-info flex-right">
                 <img id="pfp" src={pfp} alt="Photo of Jared Hector" />
-                <p>Hi, I'm Jared. I'm a full-stack developer from Seattle, Washington.
+                <p>Hi, I'm Jared. I'm a full stack developer from Seattle, Washington.
                     I recently graduated from Stanford University with a B.S. in Symbolic Systems
-                    with a Computer Music concentration. To sum myself up in a small portfolio site entry:
-                    I love music, I love coding, and every day I strive to be the solution to a problem.
+                    with a Computer Music concentration. Recently, I came to realize web development 
+                    would be a great opportunity to exercise my creativity and drive to reach wide audiences.
+                    I enrolled in a full stack program at the University of Washington to enable me to dive into
+                    the world of web dev.
                     <br /><br />
-                    Here's a little bit 
+                    In short: I love music, I love coding, and every day I strive to be the solution to a problem.
                 </p>
+                <hr />
+                <div id="education">
+                    <h2 className="about-section-label">Education</h2>
+                    <div className="school">
+                        <img className="school-logo" id="stanford-logo" alt="S logo of Stanford University" src={stanford} />
+                        <div className="school-info">
+                            <h2 className="school-name">Stanford University</h2>
+                            <p className="school-details">B.S., Symbolic Systems - <em>2016-2020</em></p>
+                        </div>
+                    </div>
+                    <div className="school">
+                        <img className="school-logo" id="uw-logo" alt="W logo of the University of Washington" src={uw} />
+                        <div className="school-info">
+                            <h2 className="school-name">University of Washington</h2>
+                            <p className="school-details">Full Stack Web Development Program - <em>2020</em></p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h2 className="about-section-label">Skills</h2>
+                <div id="skillset">
+                    <div className="skill">
+                        <img className="skill-logo" id="react" alt="Node.js logo." src={react} />
+                        <h2 className="skill-name">React</h2>
+                    </div>
+                    <div className="skill">
+                        <img className="skill-logo" id="nodejs" alt="Node.js logo." src={nodejs} />
+                        <h2 className="skill-name">NodeJS</h2>
+                    </div>
+                    <div className="skill">
+                        <img className="skill-logo" id="frontend" alt="HTML5, CSS, and JS logos." src={frontend} />
+                        <h2 className="skill-name">HTML5, CSS, and JS Front End Stack</h2>
+                    </div>
+                    <div className="skill">
+                        <img className="skill-logo" id="db" alt="Database circular stack icon." src={db} />
+                        <h2 className="skill-name">MySQL, Postgres, MongoDB</h2>
+                    </div>
+                    <div className="skill">
+                        <img className="skill-logo" id="python" alt="Python snake logo." src={python} />
+                        <h2 className="skill-name">Python</h2>
+                    </div>
+                    <div className="skill">
+                        <img className="skill-logo" id="cpp" alt="C++ logo." src={cpp} />
+                        <h2 className="skill-name">C++</h2>
+                    </div>
+                </div>
                 {/* <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui id ante pulvinar malesuada. Aenean et sem convallis, venenatis orci vitae, fermentum est. Etiam id risus ut elit lobortis hendrerit id tempus turpis. Praesent volutpat rhoncus nisi ut sollicitudin. Nulla sit amet varius elit. Aenean pharetra condimentum tortor eu pulvinar. Donec in mauris nisi. Vivamus scelerisque efficitur libero non tincidunt. Nullam faucibus neque sed est commodo, sed gravida tellus consectetur.
 
