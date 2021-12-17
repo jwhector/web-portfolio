@@ -1,0 +1,105 @@
+
+
+#about {
+    /* width: 100vw;
+    height: 100vh; */
+    position: relative;
+    display: flex;
+}
+
+/* #about-header {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 64px;
+} */
+
+#about-label {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#about-left {
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+    /* border: 1px solid #707070; */
+}
+
+#pfp {
+    border-radius: 100%;
+    border: 5px black;
+    margin: 50px 0;
+    animation: fadeIn 1s;
+}
+
+#education {
+    width: 80%;
+}
+
+.school {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* align-items: center;
+    justify-content: space-between; */
+    margin: 10% 0;
+}
+
+.school-logo {
+    max-height: 300px;
+    
+    /* margin: 100px; */
+}
+
+.school-info {
+    text-align: center;
+} 
+
+.school-name {
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    font-size: 2em;
+}
+
+.school-details {
+    margin-top: 10px;
+}
+
+#skillset {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    font-size: 40px;
+}
+
+.skill img {
+    max-height: 200px;
+}
+
+.about-section-label {
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(5%);}
+    100% { opacity: 1; transform: translateY(0%)}
+}

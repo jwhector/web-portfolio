@@ -1,105 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-    display: none;
-}
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+@font-face {
+    font-family: 'Documenta';
+    src: url('./res/documenta/Documenta.otf');
 }
 
-
-body {
-    opacity: 1;
-}
-a {
-    text-decoration: none;
+@font-face {
+    font-family: 'Metropolis';
+    src: url('./res/Metropolis/Metropolis-Light.otf');
 }
 
-p {
-    min-width: 0;
-}
-
-.hdr-txt {
-    font-family: 'Bungee'; 
-}
-
-.section {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box; ;
-}
-
-.section-label {
-    width: 30vw;
-    /* min-width: 20vw; */
-    /* min-width: 400px; */
-    /* max-width: 400px; */
-    /* flex-grow: 1; */
-    flex-shrink: 0;
+html, body {
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
-    background: linear-gradient(180deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
-}
-
-.flip-gradient {
-    background: linear-gradient(0deg, #1E0040 0%, #370076 100%) 0% 0% no-repeat padding-box;
-}
-
-.fix-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-
-.fix-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.section-info {
-    background-color: #31393C;
-    /* min-width: 60vw; */
-    /* width: 60vw; */
-    flex-grow: 1;
-    overflow: hidden;
-}
-
-.pin-bottom-right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    top: auto;
-}
-
-.pin-bottom-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    top: auto;
-}
-
-.flex-right {
-    margin-left: auto;
-}
-
-.flex-left {
-    margin-right: auto;
-}
-
-.label {
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-size: 64px;
-}
-
-.hidden {
-    display: none;
+    /* font-size: 20px !important; */
 }

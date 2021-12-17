@@ -1,41 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './index.css';
-import nameBox from './nameBox.png';
+import Circle from '../Circle';
+import waitForElementTransition from 'wait-for-element-transition';
+import { Link, useNavigate } from 'react-router-dom';
+import { waitFor } from '@testing-library/react';
 
-export default function Home() {
-    const scrollToAbout = () => {
-        const about = document.getElementById('about');
-        about.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-    }
-    const scrollToPortfolio = () => {
-        const portfolio = document.getElementById('portfolio');
-        portfolio.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-    }
-    const scrollToContact = () => {
-        const contact = document.getElementById('contact');
-        contact.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+export default function Home(props) {
+    const [converge, setConverge] = useState(false);
+    const [inFocus, setInFocus] = useState('');
+    // const [curPage, setCurPage] = useState('');
+    let navigate = useNavigate();
+
+    const toggleConverge = (e) => {
+        const page = e.currentTarget.id.split('-')[0];
+        setInFocus(page);
+        setConverge(!converge);
+        waitForElementTransition(e.currentTarget).then(() => {
+            navigate(`/${page}`);
+        });
     }
 
     return (
         <div id="home">
-            <div id="name">
-                <h2 id="my-name" className="hdr-txt">Jared Hector</h2>
-                <img id="name-box" alt="3D box surrounding 'Jared Hector'" src={nameBox} />
-            </div>
-            <h3 id="subtitle">Developer. Project Manager. Dungeon Master.</h3>
-            <div className="main-links">
-                <div className="menu-div">
-                    <h2 className="hdr-txt big-nav">ABOUT</h2>
-                    <a onClick={scrollToAbout}></a>
-                </div>
-                <div className="menu-div">
-                    <h2 className="hdr-txt big-nav">PORTFOLIO</h2>
-                    <a onClick={scrollToPortfolio}></a>
-                </div>
-                <div  className="menu-div">
-                    <h2 className="hdr-txt big-nav">CONTACT</h2>
-                    <a onClick={scrollToContact}></a>
-                </div>
+            <h1 id="name-title">Jared Hector</h1>
+            <div className="menu-circle-container">
+                <Circle name="About" page="about" convergeClass='center-from-left' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
+                <Circle name="Portfolio" page="portfolio" convergeClass='fade-center' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
+                <Circle name="Contact" page="contact" convergeClass='center-from-right' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
             </div>
         </div>
     );

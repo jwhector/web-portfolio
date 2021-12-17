@@ -1,0 +1,128 @@
+.circle-container {
+    width: 25rem;
+    height: 25rem;
+    margin: 0 2rem;
+    position: relative;
+    transition: transform .7s ease-in;
+
+}
+
+.menu-circle {
+    /* 444px */
+    height: 100%;
+    width: 100%;
+    background: transparent radial-gradient(closest-side at 50% 50%, #00DDE6 0%, #62FF92 100%) 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #0000004D;
+    opacity: 0.8;
+    border-radius: 100%;
+    text-align: center;
+    
+    transition: transform .7s ease-in;
+}
+
+.menu-label {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Documenta';
+    font-size: 4rem;
+    text-align: center;
+    top: 0;
+}
+
+.menu-circle:hover {
+    opacity: 1;
+}
+
+.center-from-right {
+    transform: translateX(-29rem);
+    transition: transform .7s ease-in-out, opacity .7s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.fade-center {
+    transition: opacity .7s ease-in-out;
+    opacity: 0;
+}
+
+.center-from-left {
+    transform: translateX(29rem);
+    transition: transform .7s ease-in-out, opacity .7s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.in-focus {
+    z-index: 2;
+    opacity: 1;
+}
+
+.centered {
+    position: absolute;
+}
+
+.shrink-circle {
+    animation: shrink 1.5s;
+    width: 15rem;
+    height: 15rem;
+    z-index: 2;
+}
+
+.shrink-circle div {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.shrink-text h2 {
+    transition: 1.5s;
+    transform: scale(.66);
+    /* animation: shrink-text 1.5s forwards; */
+}
+
+.grow-circle {
+    animation: grow 2s forwards;
+}
+
+@keyframes shrink {
+    0% {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    100% {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    50% {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    100% {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@keyframes shrink-text {
+    0% {
+        font-size: 4rem;
+    }
+
+    100% {
+        font-size: 3rem;
+    }
+}
