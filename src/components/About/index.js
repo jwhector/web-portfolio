@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './index.css';
+import './About.css';
 import Circle from '../Circle';
 import stanford from './stanford.png';
 import uw from './uw.png';
@@ -9,12 +9,12 @@ export default function About(props) {
 
     return (
         <div id="about" className="page-container">
-            <h1 id="name-title">Jared Hector</h1>
+            <h1 id="name-title">JARED HECTOR</h1>
             <button onClick={() => setExit(!exit)}>YOLO</button> 
             <p id="about-me-txt" className={`${exit ? 'fade-out' : ''}`}>Hi, I'm Jared. I'm a full stack developer from Seattle, Washington.
                     Recently, I came to realize web development would be a great opportunity to exercise my creativity and drive to reach wide audiences.
                     In short: I love music, I love coding, and every day I strive to be the solution to a problem.</p>
-            <Circle name="About" page="about" className={`centered shrink-circle ${exit ? 'grow-circle' : ''}`} />
+            <Circle name="About" page="about" className={`centered shrinked ${exit ? 'grow-circle' : ''}`} />
 
             <h2 id='me-title' className={`about-title ${exit ? 'fade-out' : ''}`}>ME</h2>
             <svg id='about-me-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 177" fill="none" xmlns="http://www.w3.org/2000/svg">

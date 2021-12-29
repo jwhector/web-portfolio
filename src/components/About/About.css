@@ -19,7 +19,7 @@
     top: 50%;
     left: 50%;
     opacity: 0;
-    animation: fade-in 3s forwards;
+    animation: fade-in 2s forwards;
     transform: translate(-36rem, -14rem);
 }
 
@@ -32,7 +32,7 @@
     word-wrap: normal;
     text-align: center;
     opacity: 0;
-    animation: fade-in 3s forwards;
+    animation: fade-in 2s forwards;
     transform: translate(13rem, -14rem);
 }
 
@@ -100,7 +100,7 @@ path {
     top: 50%;
     transform: translate(-35rem, 12rem);
     /* display: flex; */
-    animation: fade-in 3s forwards;
+    animation: fade-in 2s forwards;
     /* justify-content: center; */
 }
 
@@ -110,7 +110,7 @@ path {
     top: 50%;
     left: 50%;
     transform: translate(12rem, -11rem);
-    animation: fade-in 3s forwards;
+    animation: fade-in 2s forwards;
 }
 
 .school-container {
@@ -144,20 +144,20 @@ path {
 .small-stroke {
     stroke-dasharray: 443;
     stroke-dashoffset: 443;
-    animation: stroke-in-small 2s forwards;
+    animation: stroke-in-small 1.5s forwards;
 }
 
 .lg-stroke {
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
-    animation: stroke-in-lg 2s forwards;
+    animation: stroke-in-lg 1.5s forwards;
 }
 
 .about-title {
     font-family: 'Documenta';
     font-size: 4rem;
     opacity: 0;
-    animation: fade-in 3s forwards;
+    animation: fade-in 1.5s forwards;
 }
 
 .stroke-out-small {
@@ -199,7 +199,7 @@ button {
 }
 
 @keyframes stroke-in-small {
-    50% {
+    0% {
         stroke-dashoffset: 443;
     }
 
@@ -209,7 +209,7 @@ button {
 
 }
 @keyframes stroke-in-lg {
-    50% {
+    0% {
         stroke-dashoffset: 600;
     }
 

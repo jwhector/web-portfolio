@@ -62,8 +62,20 @@
     opacity: 1;
 }
 
+.in-focus div {
+    opacity: 1;
+}
+
 .centered {
     position: absolute;
+    transition: none;
+    transform: none;
+}
+
+.shrink-all {
+    /* transition: 1.5s ease-in-out;
+    transform: scale(.7); */
+    animation: shrink-all 1.5s forwards;
 }
 
 .shrink-circle {
@@ -73,19 +85,39 @@
     z-index: 2;
 }
 
+.shrinked {
+    width: 15rem;
+    height: 15rem;
+    z-index: 2;
+}
+
+.shrinked-text h2 {
+    transform: scale(0.6);
+}
+
 .shrink-circle div {
     transition: opacity 1s ease-in-out;
     opacity: 1;
 }
 
 .shrink-text h2 {
-    transition: 1.5s;
-    transform: scale(.66);
-    /* animation: shrink-text 1.5s forwards; */
+    /* transition: 1.5s; */
+    /* transform: scale(.66); */
+    animation: shrink-text 1.5s forwards;
 }
 
 .grow-circle {
-    animation: grow 2s forwards;
+    animation: grow 1s forwards;
+}
+
+@keyframes shrink-all {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.6);
+    }
 }
 
 @keyframes shrink {
@@ -106,10 +138,10 @@
         height: 15rem;
     }
 
-    50% {
+    /* 50% {
         width: 15rem;
         height: 15rem;
-    }
+    } */
 
     100% {
         width: 25rem;

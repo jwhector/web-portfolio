@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './index.css';
+import './Circle.css';
 
 export default function Circle(props) {
     return (

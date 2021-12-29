@@ -13,16 +13,26 @@ export default function Home(props) {
 
     const toggleConverge = (e) => {
         const page = e.currentTarget.id.split('-')[0];
+        const target = e.currentTarget;
         setInFocus(page);
         setConverge(!converge);
         waitForElementTransition(e.currentTarget).then(() => {
-            navigate(`/${page}`);
+            target.addEventListener('animationend', () => {
+                console.log('Animation ended');
+                navigate(`/${page}`);
+            });
+            target.classList.add('centered');
+            if (target.id === 'about-btn') target.classList.add('shrink-circle');
+            else target.classList.add('shrink-all');
+            waitForElementTransition(target).then(() => {
+                // navigate(`/${page}`);
+            });
         });
     }
 
     return (
         <div id="home">
-            <h1 id="name-title">Jared Hector</h1>
+            <h1 id="name-title">JARED HECTOR</h1>
             <div className="menu-circle-container">
                 <Circle name="About" page="about" convergeClass='center-from-left' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
                 <Circle name="Portfolio" page="portfolio" convergeClass='fade-center' converge={converge} onClick={toggleConverge} inFocus={inFocus} />

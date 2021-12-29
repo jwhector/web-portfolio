@@ -1,0 +1,121 @@
+.bubble-container {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    animation: emerge 1.5s forwards;
+}
+
+.bubble {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background-color: black;
+    border-radius: 100%;
+    transition: 1.5s;
+    box-shadow: 2px 0px 2px gray;
+    overflow: hidden;
+}
+
+.bubble-img {
+    height: 100%;
+    width: 100%;
+    /* border-radius: 100%; */
+    object-fit: cover;
+    object-position: 50% 50%;
+    animation: antirotate 1.5s forwards;
+}
+
+.bubble-img:hover {
+    opacity: 0;
+}
+
+.bubble-info {
+    height: 100%;
+    width: 100%;
+}
+
+.top-left {
+    right: 0;
+    top: 50%;
+    transform: translateX(5rem) translateY(-50%);
+    animation: expand 1.5s forwards;
+}
+
+.top-right {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(5rem);
+    animation: expand 1.5s forwards;
+
+}
+
+.bot-left {
+    left: 50%;
+    transform: translateX(-50%) translateY(-5rem);
+    animation: expand 1.5s forwards;
+
+}
+
+.bot-right {
+    left: 0;
+    top: 50%;
+    transform: translateX(-5rem) translateY(-50%);
+    animation: expand 1.5s forwards;
+}
+
+@keyframes emerge {
+    0% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    40% {
+        width: 15rem;
+        height: 15rem;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        width: 50rem;
+        height: 50rem;
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes expand {
+    0% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    50% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    100% {
+        width: 17rem;
+        height: 17rem;
+    }
+}
+
+@keyframes antirotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-225deg);
+    }
+}
+
+
+
+/* @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(225deg); }
+} */
