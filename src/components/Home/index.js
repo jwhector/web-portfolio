@@ -24,6 +24,7 @@ export default function Home(props) {
             target.classList.add('centered');
             if (target.id === 'about-btn') target.classList.add('shrink-circle');
             else target.classList.add('shrink-all');
+            props.setCurPage(page.toUpperCase());
             waitForElementTransition(target).then(() => {
                 // navigate(`/${page}`);
             });

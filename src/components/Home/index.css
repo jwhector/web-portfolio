@@ -8,13 +8,6 @@
     background-color: #ededed;
 }
 
-#name-title {
-    position: absolute;
-    top: 2rem;
-    font-family: 'Metropolis', sans-serif;
-    font-size: 3rem;
-}
-
 .menu-circle-container {
     display: flex;
     justify-content: center;

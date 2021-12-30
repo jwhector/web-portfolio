@@ -1,0 +1,28 @@
+#name-title {
+    position: absolute;
+    top: 2rem;
+    font-family: 'Metropolis', sans-serif;
+    font-size: 3rem;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar ul {
+    position: absolute;
+    right: 0;
+    display: flex;
+    top: 2.8rem;
+    font-size: 1.5rem;
+}
+
+.nav-bar ul li {
+    margin: 0 1rem;
+}
+
+.active-link {
+    color: green;
+}

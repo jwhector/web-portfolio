@@ -1,23 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router';
 import './About.css';
 import Circle from '../Circle';
 import stanford from './stanford.png';
 import uw from './uw.png';
+import Nav from '../Nav';
 
 export default function About(props) {
     const [exit, setExit] = useState(false);
 
+    const line = useRef(null);
+    const navigate = useNavigate();
+
+    let navigated = false;
+
+    useEffect(() => {
+        props.setCurPage('ABOUT');
+    }, []);
+
+    useEffect(() => {
+        const lineElem = line.current;
+        if (props.curPage !== 'ABOUT') {
+            setExit(true);
+            lineElem.addEventListener('animationend', navigateToCurPage);
+            return function cleanup() {
+                lineElem.removeEventListener('animationend', navigateToCurPage);
+            }
+        }
+    }, [props.curPage]);
+
+    const navigateToCurPage = () => {
+        if (navigated) return;
+        navigate(`/${props.curPage.toLowerCase()}`);
+        navigated = true;
+    }
+
     return (
         <div id="about" className="page-container">
+            <Nav curPage={props.curPage} setCurPage={props.setCurPage}/>
             <h1 id="name-title">JARED HECTOR</h1>
-            <button onClick={() => setExit(!exit)}>YOLO</button> 
             <p id="about-me-txt" className={`${exit ? 'fade-out' : ''}`}>Hi, I'm Jared. I'm a full stack developer from Seattle, Washington.
                     Recently, I came to realize web development would be a great opportunity to exercise my creativity and drive to reach wide audiences.
                     In short: I love music, I love coding, and every day I strive to be the solution to a problem.</p>
-            <Circle name="About" page="about" className={`centered shrinked ${exit ? 'grow-circle' : ''}`} />
+            <Circle name="About" page="about" className={`centered in-focus shrinked`} />
 
             <h2 id='me-title' className={`about-title ${exit ? 'fade-out' : ''}`}>ME</h2>
-            <svg id='about-me-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg ref={line} id='about-me-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 177" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M350 176L228.981 1H0" stroke="black"/>
             </svg>
             

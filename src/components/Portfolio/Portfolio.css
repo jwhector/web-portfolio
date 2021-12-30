@@ -3,6 +3,7 @@
     height: 15rem;
     position: relative;
     animation: emerge 1.5s forwards;
+    box-shadow: gray;
 }
 
 .bubble {
@@ -17,21 +18,41 @@
 }
 
 .bubble-img {
+    position: absolute;
     height: 100%;
     width: 100%;
     /* border-radius: 100%; */
     object-fit: cover;
     object-position: 50% 50%;
-    animation: antirotate 1.5s forwards;
-}
-
-.bubble-img:hover {
-    opacity: 0;
+    transition: opacity 0.2s;
+    animation: antirotate 1.5s forwards, fade-in 1.5s forwards;
 }
 
 .bubble-info {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: antirotate 1.5s forwards;
+    background-color: rgba(237,237,237, 0.7);
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.bubble-info:hover {
+    opacity: 1;
+}
+
+.bubble-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ico {
+    width: 5rem;
+    height: 5rem;
 }
 
 .top-left {
@@ -61,6 +82,14 @@
     top: 50%;
     transform: translateX(-5rem) translateY(-50%);
     animation: expand 1.5s forwards;
+}
+
+.exit {
+    animation: expand 1.5s forwards, exit 1s forwards;
+}
+
+.retreat {
+    animation: emerge 1.5s forwards, retreat 1s forwards;
 }
 
 @keyframes emerge {
@@ -113,9 +142,45 @@
     }
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
 
+    40% {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
 
-/* @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(225deg); }
-} */
+@keyframes exit {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes retreat {
+    0% {
+        width: 50rem;
+        height: 50rem;
+        transform: rotate(225deg);
+    }
+
+    60% {
+        width: 15rem;
+        height: 15rem;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        width: 5rem;
+        height: 5rem;
+    }
+}

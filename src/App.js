@@ -22,9 +22,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route exact path="/" element={<Home curPage={curPage} setCurPage={setCurPage} />} />
+        <Route path="/about" element={<About curPage={curPage} setCurPage={setCurPage} />} />
+        <Route path="/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} />} />
       </Routes>
     </Router>
   );
