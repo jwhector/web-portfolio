@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
-import './App.css';
 import './reset.css';
+import './App.css';
 // import Nav from './components/Nav';
 import Home from './components/Home';
 import { useState } from 'react';

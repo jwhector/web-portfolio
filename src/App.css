@@ -24,18 +24,18 @@ html, body {
 
 @media only screen and (max-height: 1000px) {
     html {
-      font-size: 14px !important;
+      font-size: 14px;
     }
 }
 
 @media only screen and (max-height: 800px) {
     html {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-height: 690px) {
     html {
-        font-size: 10px !important;
+        font-size: 10px;
     }
 }
