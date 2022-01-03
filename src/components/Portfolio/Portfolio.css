@@ -1,9 +1,28 @@
+a {
+    text-decoration: none;
+}
+
+#portfolio {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    position: relative;
+    font-family: 'Metropolis', sans-serif;
+}
+
 .bubble-container {
     width: 15rem;
     height: 15rem;
-    position: relative;
+    position: absolute;
     animation: emerge 1.5s forwards;
     box-shadow: gray;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bubble {
@@ -39,6 +58,8 @@
     background-color: rgba(237,237,237, 0.7);
     transition: opacity .2s;
     opacity: 0;
+    text-align: center;
+    color: black
 }
 
 .bubble-info:hover {
@@ -101,13 +122,13 @@
     40% {
         width: 15rem;
         height: 15rem;
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     100% {
         width: 50rem;
         height: 50rem;
-        transform: rotate(225deg);
+        transform: translate(-50%, -50%) rotate(225deg);
     }
 }
 
@@ -170,13 +191,13 @@
     0% {
         width: 50rem;
         height: 50rem;
-        transform: rotate(225deg);
+        transform: translate(-50%, -50%) rotate(225deg);
     }
 
     60% {
         width: 15rem;
         height: 15rem;
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     100% {

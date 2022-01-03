@@ -4,6 +4,7 @@ import Circle from '../Circle';
 import waitForElementTransition from 'wait-for-element-transition';
 import { Link, useNavigate } from 'react-router-dom';
 import { waitFor } from '@testing-library/react';
+import Nav from '../Nav';
 
 export default function Home(props) {
     const [converge, setConverge] = useState(false);
@@ -19,7 +20,7 @@ export default function Home(props) {
         waitForElementTransition(e.currentTarget).then(() => {
             target.addEventListener('animationend', () => {
                 console.log('Animation ended');
-                navigate(`/${page}`);
+                navigate(`/react-portfolio/${page}`);
             });
             target.classList.add('centered');
             if (target.id === 'about-btn') target.classList.add('shrink-circle');
@@ -33,8 +34,8 @@ export default function Home(props) {
 
     return (
         <div id="home">
-            <h1 id="name-title">JARED HECTOR</h1>
-            <div className="menu-circle-container">
+            <Nav hideLinks={true} />
+            <div className="body-container menu-circle-container">
                 <Circle name="About" page="about" convergeClass='center-from-left' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
                 <Circle name="Portfolio" page="portfolio" convergeClass='fade-center' converge={converge} onClick={toggleConverge} inFocus={inFocus} />
                 <Circle name="Contact" page="contact" convergeClass='center-from-right' converge={converge} onClick={toggleConverge} inFocus={inFocus} />

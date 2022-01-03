@@ -1,0 +1,111 @@
+#contact {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    position: relative;
+    font-family: 'Metropolis', sans-serif;
+}
+
+.contact-container {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: expand-contact 1s forwards;
+}
+
+.contact-elem {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    /* background-color: green; */
+    transition: 3s;
+    box-shadow: 2px 2px 3px gray;
+}
+
+.linkedin {
+    position: absolute;
+    right: 0;
+}
+
+.linkedin img {
+    width: 100%;
+}
+
+.github {
+    position: absolute;
+    left: 0;
+}
+
+.github img {
+    width: 100%;
+}
+
+.email {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.email img {
+    width: 100%;
+}
+
+.lift-circle {
+    animation: lift .7s forwards ease-in-out;
+}
+
+.lower-circle {
+    animation: lower 1s forwards ease-in-out;
+}
+
+.retract-contact {
+    animation: retract-contact 1s forwards ease-out;
+}
+
+@keyframes lift {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -25rem);
+    }
+}
+
+@keyframes lower {
+    0% {
+        transform: translate(-50%, -25rem);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes expand-contact {
+    40% {
+        width: 15rem;
+    }
+
+    100% {
+        width: 50rem;
+    }
+}
+
+@keyframes retract-contact {
+    0% {
+        width: 50rem;
+    }
+
+    40% {
+        width: 15rem;
+    }
+}

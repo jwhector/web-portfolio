@@ -12,6 +12,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import Contact from './components/Contact';
 // import About from './components/About';
 // import Contact from './components/Contact';
 // import Portfolio from './components/Portfolio';
@@ -22,9 +23,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home curPage={curPage} setCurPage={setCurPage} />} />
-        <Route path="/about" element={<About curPage={curPage} setCurPage={setCurPage} />} />
-        <Route path="/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} />} />
+        <Route exact path="/react-portfolio/" element={<Home curPage={curPage} setCurPage={setCurPage} />} />
+        <Route path="/react-portfolio/about" element={<About curPage={curPage} setCurPage={setCurPage} />} />
+        <Route path="/react-portfolio/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} />} />
+        <Route path="/react-portfolio/contact" element={<Contact curPage={curPage} setCurPage={setCurPage} />} />
       </Routes>
     </Router>
   );

@@ -45,52 +45,54 @@ export default function Portfolio(props) {
 
     const navigateToCurPage = () => {
         if (navigated) return;
-        navigate(`/${props.curPage.toLowerCase()}`);
+        navigate(`/react-portfolio/${props.curPage.toLowerCase()}`);
         navigated = true;
     }
 
     return (
-        <div id="about" className="page-container">
+        <div id="portfolio" className="page-container">
             <Nav curPage={props.curPage} setCurPage={props.setCurPage}/>
-            {/* <h1 id="name-title">JARED HECTOR</h1> */}
-            {/* <button style={{ zIndex: 5 }} onClick={handleYolo}>YOLO</button> */}
-            <Circle name="Portfolio" page="portfolio" className='centered shrinked shrinked-text in-focus' />
-            <div ref={container} className={`bubble-container ${props.curPage === 'PORTFOLIO' ? '' : 'retreat'}`}>
-                <div className={`bubble top-left ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
-                    <img className='bubble-img' src={viewnify} />
-                    <a href='https://viewnify.herokuapp.com/'>
-                        <div className='bubble-info'>
-                            <h2>Viewnify</h2>
-                            <a href='https://github.com/jwhector/viewnify'><img className='ico' src={github} /></a>
-                        </div>
-                    </a>
-                </div>
-                <div className={`bubble top-right ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
-                    <img className='bubble-img' src={metameme} />
-                    <a href='https://meta-meme-market.herokuapp.com/'>
-                        <div className='bubble-info'>
-                            <h2>MetaMemeMarket</h2>
-                            <a href='https://github.com/jwhector/meta-meme-market'><img className='ico' src={github} /></a>
-                        </div>
-                    </a>
-                </div>
-                <div className={`bubble bot-left ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
-                    <img className='bubble-img' src={mindgro} />
-                    <a href='https://jwhector.github.io/mind-gro/'>
-                        <div className='bubble-info'>
-                            <h2>MindGro</h2>
-                            <a href='https://github.com/jwhector/mind-gro'><img className='ico' src={github} /></a>
-                        </div>
-                    </a>
-                </div>
-                <div className={`bubble bot-right ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
-                    <img className='bubble-img' src={glassAnimals} />
-                    <a href='https://jwhector.github.io/code-quiz/'>
-                        <div className='bubble-info'>
-                            <h2>Glass Animals Quiz</h2>
-                            <a href='https://github.com/jwhector/code-quiz'><img className='ico' src={github} /></a>
-                        </div>
-                    </a>
+            <div className="body-container">
+                {/* <h1 id="name-title">JARED HECTOR</h1> */}
+                {/* <button style={{ zIndex: 5 }} onClick={handleYolo}>YOLO</button> */}
+                <Circle name="Portfolio" page="portfolio" className='centered shrinked shrinked-text in-focus' />
+                <div ref={container} className={`bubble-container ${props.curPage === 'PORTFOLIO' ? '' : 'retreat'}`}>
+                    <div className={`bubble top-left ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
+                        <img className='bubble-img' src={viewnify} />
+                        <a href='https://viewnify.herokuapp.com/'>
+                            <div className='bubble-info'>
+                                <h2>Viewnify</h2>
+                                <a href='https://github.com/jwhector/viewnify'><img className='ico' src={github} /></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div className={`bubble top-right ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
+                        <img className='bubble-img' src={metameme} />
+                        <a href='https://meta-meme-market.herokuapp.com/'>
+                            <div className='bubble-info'>
+                                <h2>MetaMeme</h2>
+                                <a href='https://github.com/jwhector/meta-meme-market'><img className='ico' src={github} /></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div className={`bubble bot-left ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
+                        <img className='bubble-img' src={mindgro} />
+                        <a href='https://jwhector.github.io/mind-gro/'>
+                            <div className='bubble-info'>
+                                <h2>MindGro</h2>
+                                <a href='https://github.com/jwhector/mind-gro'><img className='ico' src={github} /></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div className={`bubble bot-right ${props.curPage === 'PORTFOLIO' ? '' : 'exit'}`}>
+                        <img className='bubble-img' src={glassAnimals} />
+                        <a href='https://jwhector.github.io/code-quiz/'>
+                            <div className='bubble-info'>
+                                <h2>Glass Animals Quiz</h2>
+                                <a href='https://github.com/jwhector/code-quiz'><img className='ico' src={github} /></a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

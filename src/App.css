@@ -14,3 +14,9 @@ html, body {
     overflow: hidden;
     /* font-size: 20px !important; */
 }
+
+.body-container {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+}

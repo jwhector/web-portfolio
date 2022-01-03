@@ -16,7 +16,6 @@
     opacity: 0.8;
     border-radius: 100%;
     text-align: center;
-    
     transition: transform .7s ease-in;
 }
 
@@ -69,7 +68,10 @@
 .centered {
     position: absolute;
     transition: none;
-    transform: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 .shrink-all {
@@ -83,12 +85,14 @@
     width: 15rem;
     height: 15rem;
     z-index: 2;
+    margin: 0;
 }
 
 .shrinked {
     width: 15rem;
     height: 15rem;
     z-index: 2;
+    margin: 0;
 }
 
 .shrinked-text h2 {
@@ -112,11 +116,11 @@
 
 @keyframes shrink-all {
     0% {
-        transform: scale(1);
+        transform: translate(-50%, -50%) scale(1);
     }
 
     100% {
-        transform: scale(0.6);
+        transform: translate(-50%, -50%) scale(0.6);
     }
 }
 
