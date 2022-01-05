@@ -1,6 +1,6 @@
 #about {
-    height: 100vh;
     width: 100vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,5 +235,42 @@ button {
 
     100% {
         stroke-dashoffset: 600;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #about-me-txt {
+        position: unset;
+        transform: none;
+    }
+    
+    #education-txt {
+        position: unset;
+        transform: none;
+    }
+    
+    #me-title {
+        position: unset;
+        transform: none;
+    }
+    
+    #education-title {
+        position: unset;
+        transform: none;
+    }
+    
+    #skills-title {
+        position: unset;
+        transform: none;
+    }
+    
+    #skills-container {
+        position: unset;
+        transform: none;
+    }
+    
+    #education-container {
+        position: unset;
+        transform: none;
     }
 }

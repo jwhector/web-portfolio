@@ -8,6 +8,7 @@ import Nav from '../Nav';
 
 export default function About(props) {
     const [exit, setExit] = useState(false);
+    const [resize, setResize] = useState(false);
 
     const line = useRef(null);
     const navigate = useNavigate();
@@ -17,8 +18,13 @@ export default function About(props) {
     useEffect(() => {
         props.setCurPage('ABOUT');
     }, []);
+    
+    useEffect(() => {
+        setResize(props.isMobile);
+    }, [props.isMobile]);
 
     useEffect(() => {
+        if (!line.current) return;
         const lineElem = line.current;
         if (props.curPage !== 'ABOUT') {
             setExit(true);
@@ -41,20 +47,20 @@ export default function About(props) {
         <div id="about" className="page-container">
             <Nav curPage={props.curPage} setCurPage={props.setCurPage}/>
             <div className="body-container">
+                {props.isMobile ? <></> : <Circle name="About" page="about" className={`centered in-focus shrinked`} />}
+
+                <h2 id='me-title' className={`about-title ${exit ? 'fade-out' : ''}`}>ME</h2>
                 <p id="about-me-txt" className={`${exit ? 'fade-out' : ''}`}>Hi, I'm Jared. I'm a full stack developer from Seattle, Washington.
                         Recently, I came to realize web development would be a great opportunity to exercise my creativity and drive to reach wide audiences.
                         In short: I love music, I love coding, and every day I strive to be the solution to a problem.</p>
-                <Circle name="About" page="about" className={`centered in-focus shrinked`} />
-
-                <h2 id='me-title' className={`about-title ${exit ? 'fade-out' : ''}`}>ME</h2>
-                <svg ref={line} id='about-me-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {props.isMobile ? <></> : <svg ref={line} id='about-me-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 177" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M350 176L228.981 1H0" stroke="black"/>
-                </svg>
+                </svg>}
                 
                 <h2 id='education-title' className={`about-title ${exit ? 'fade-out' : ''}`}>EDUCATION</h2>
-                <svg id='education-svg' className={`lg-stroke ${exit ? 'stroke-out-lg' : ''}`} viewBox="0 0 446 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {props.isMobile ? <></> : <svg id='education-svg' className={`lg-stroke ${exit ? 'stroke-out-lg' : ''}`} viewBox="0 0 446 177" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 176L122.019 1H445.5" stroke="black"/>
-                </svg>
+                </svg>}
                 <div id='education-container' className={`${exit ? 'fade-out' : ''}`}>
                     <div className='school-container'>
                         <img className='school-logo' src={stanford} />
@@ -78,9 +84,9 @@ export default function About(props) {
 
                 
                 <h2 id='skills-title' className={`about-title ${exit ? 'fade-out' : ''}`}>SKILLS</h2>
-                <svg id='skills-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {props.isMobile ? <></> : <svg id='skills-svg' className={`small-stroke ${exit ? 'stroke-out-small' : ''}`} viewBox="0 0 351 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M350 1L228.981 101H0" stroke="black"/>
-                </svg>
+                </svg>}
                 <div id='skills-container' className={`${exit ? 'fade-out' : ''}`}>
                     <h2 className='skill-item'>React</h2>
                     <h2 className='skill-item'>Node.js</h2>

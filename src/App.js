@@ -19,14 +19,27 @@ import Contact from './components/Contact';
 
 function App() {
   const [curPage, setCurPage] = useState('home');
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  const handleWindowResize = () => {
+    console.log(window.innerWidth);
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useState(() => {
+    window.addEventListener('resize', handleWindowResize);
+    return function cleanup() {
+      window.removeEventListener('resize', handleWindowResize);
+    }
+  }, []);
 
   return (
     <Router>
       <Routes>
-        <Route exact path="/react-portfolio/" element={<Home curPage={curPage} setCurPage={setCurPage} />} />
-        <Route path="/react-portfolio/about" element={<About curPage={curPage} setCurPage={setCurPage} />} />
-        <Route path="/react-portfolio/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} />} />
-        <Route path="/react-portfolio/contact" element={<Contact curPage={curPage} setCurPage={setCurPage} />} />
+        <Route exact path="/react-portfolio/" element={<Home curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/react-portfolio/about" element={<About curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/react-portfolio/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/react-portfolio/contact" element={<Contact curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
       </Routes>
     </Router>
   );

@@ -9,9 +9,14 @@
 }
 
 html, body {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
-    overflow: hidden;
+    display: inline-block;
+    /* overflow: hidden; */
+}
+
+body {
+    display: inline-block;
 }
 
 .body-container {
@@ -37,5 +42,19 @@ html, body {
 @media only screen and (max-height: 690px) {
     html {
         font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .body-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: unset;
+        /* margin-top: 40vh; */
+    }
+
+    .page-container {
+        margin-top: 8rem;
     }
 }
