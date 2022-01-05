@@ -32,7 +32,7 @@ a {
     background-color: black;
     border-radius: 100%;
     transition: 1.5s;
-    box-shadow: 2px 0px 2px gray;
+    box-shadow: -2px 0px 2px gray;
     overflow: hidden;
 }
 

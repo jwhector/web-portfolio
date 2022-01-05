@@ -242,35 +242,42 @@ button {
     #about-me-txt {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #education-txt {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #me-title {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #education-title {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #skills-title {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #skills-container {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
     
     #education-container {
         position: unset;
         transform: none;
+        margin: 1rem;
     }
 }

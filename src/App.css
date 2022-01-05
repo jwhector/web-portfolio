@@ -17,6 +17,7 @@ html, body {
 
 body {
     display: inline-block;
+    overflow: hidden;
 }
 
 .body-container {
@@ -46,6 +47,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
     .body-container {
         display: flex;
         flex-direction: column;

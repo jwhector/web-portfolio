@@ -24,9 +24,11 @@ export default function About(props) {
     }, [props.isMobile]);
 
     useEffect(() => {
-        if (!line.current) return;
-        const lineElem = line.current;
-        if (props.curPage !== 'ABOUT') {
+        if (!line.current && props.curPage !== 'ABOUT') {
+            setExit(true);
+            setTimeout(navigateToCurPage, 1000);
+        } else if (props.curPage !== 'ABOUT') {
+            const lineElem = line.current;
             setExit(true);
             lineElem.addEventListener('animationend', navigateToCurPage);
             return function cleanup() {
