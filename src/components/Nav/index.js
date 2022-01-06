@@ -6,6 +6,11 @@ export default function Nav(props) {
         console.log(e.target.innerText);
         props.setCurPage(e.target.innerText)
     }
+
+    const openResume = () => {
+        window.open('./resume.pdf', '_blank');
+    }
+
     return (
         <div className='nav-bar'>
             <h1 id='name-title'>JARED HECTOR</h1>
@@ -13,6 +18,7 @@ export default function Nav(props) {
                 <li onClick={handlePageChange} className={`${props.curPage === 'ABOUT' ? 'active-link' : ''}`}>ABOUT</li>
                 <li onClick={handlePageChange} className={`${props.curPage === 'PORTFOLIO' ? 'active-link' : ''}`}>PORTFOLIO</li>
                 <li onClick={handlePageChange} className={`${props.curPage === 'CONTACT' ? 'active-link' : ''}`}>CONTACT</li>
+                <li onClick={openResume}>RESUME</li>
             </ul>
         </div>
     );

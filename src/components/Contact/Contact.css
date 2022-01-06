@@ -17,7 +17,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    animation: expand-contact 1s forwards;
 }
 
 .contact-elem {
@@ -25,13 +24,14 @@
     height: 15rem;
     border-radius: 100%;
     /* background-color: green; */
-    transition: 3s;
+    /* transition: 3s; */
     box-shadow: 2px 2px 3px gray;
 }
 
 .linkedin {
     position: absolute;
     right: 0;
+    animation: expand-contact-right 1s forwards;
 }
 
 .linkedin img {
@@ -41,6 +41,7 @@
 .github {
     position: absolute;
     left: 0;
+    animation: expand-contact-left 1s forwards;
 }
 
 .github img {
@@ -66,8 +67,12 @@
     animation: lower 1s forwards ease-in-out;
 }
 
-.retract-contact {
-    animation: retract-contact 1s forwards ease-out;
+.retract-contact-right {
+    animation: retract-contact-right 1s forwards ease-out;
+}
+
+.retract-contact-left {
+    animation: retract-contact-left 1s forwards ease-out;
 }
 
 @keyframes lift {
@@ -90,22 +95,42 @@
     }
 }
 
-@keyframes expand-contact {
+@keyframes expand-contact-right {
     40% {
-        width: 15rem;
+        transform: translateX(0);
     }
 
     100% {
-        width: 50rem;
+        transform: translateX(20rem);
     }
 }
 
-@keyframes retract-contact {
+@keyframes expand-contact-left {
+    40% {
+        transform: translateX(0rem);
+    }
+
+    100% {
+        transform: translateX(-20rem);
+    }
+}
+
+@keyframes retract-contact-right {
     0% {
-        width: 50rem;
+        transform: translateX(20rem);
     }
 
     40% {
-        width: 15rem;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes retract-contact-left {
+    0% {
+        transform: translateX(-20rem);
+    }
+
+    40% {
+        transform: translateX(0rem);
     }
 }

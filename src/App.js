@@ -22,7 +22,6 @@ function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleWindowResize = () => {
-    console.log(window.innerWidth);
     setIsMobile(window.innerWidth <= 768);
   };
 
