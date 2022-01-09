@@ -20,7 +20,7 @@ export default function Home(props) {
         waitForElementTransition(e.currentTarget).then(() => {
             target.addEventListener('animationend', () => {
                 console.log('Animation ended');
-                navigate(`/react-portfolio/${page}`);
+                navigate(`/${page}`);
             });
             target.classList.add('centered');
             if (target.id === 'about-btn') target.classList.add('shrink-circle');
