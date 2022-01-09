@@ -28,7 +28,7 @@ export default function Contact(props) {
 
     const navigateToCurPage = () => {
         if (navigated) return;
-        navigate(`/react-portfolio/${props.curPage.toLowerCase()}`);
+        navigate(`/${props.curPage.toLowerCase()}`);
         navigated = true;
     }
 

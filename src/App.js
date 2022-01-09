@@ -35,10 +35,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/react-portfolio/" element={<Home curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
-        <Route path="/react-portfolio/about" element={<About curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
-        <Route path="/react-portfolio/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
-        <Route path="/react-portfolio/contact" element={<Contact curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route exact path="/" element={<Home curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/about" element={<About curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/portfolio" element={<Portfolio curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
+        <Route path="/contact" element={<Contact curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
       </Routes>
     </Router>
   );
