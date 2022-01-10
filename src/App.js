@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename='/react-portfolio'>
+    <Router>
       <Routes>
         <Route exact path="/" element={<Home curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
         <Route path="/about" element={<About curPage={curPage} setCurPage={setCurPage} isMobile={isMobile} />} />
